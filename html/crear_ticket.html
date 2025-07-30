@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crear Ticket</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">Crear Nuevo Ticket</h2>
+    <form id="ticketForm">
+      <div class="mb-3">
+        <label for="nombreCliente" class="form-label">Nombre del Cliente</label>
+        <input type="text" class="form-control" id="nombreCliente" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="productos" class="form-label">Selecciona Producto</label>
+        <select class="form-select" id="productos" required>
+          <!-- Estos productos se cargarán dinámicamente -->
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="cantidad" class="form-label">Cantidad</label>
+        <input type="number" class="form-control" id="cantidad" min="1" value="1" required />
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100">Agregar al Ticket</button>
+    </form>
+
+    <hr />
+
+    <div class="mt-4">
+      <h4>Productos en el Ticket</h4>
+      <ul id="resumenPedido" class="list-group mb-3"></ul>
+      <button id="enviarTicket" class="btn btn-success w-100">Enviar Ticket</button>
+    </div>
+
+    <div class="mt-3 text-center">
+      <a href="../index.html" class="btn btn-outline-secondary">Volver al Inicio</a>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/crear_ticket.js"></script>
+</body>
+</html>
